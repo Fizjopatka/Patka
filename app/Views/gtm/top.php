@@ -1,0 +1,1 @@
+<!-- WKLEJ TUTAJ KOD GTM (ten, który dodajemy pod otwierający tag <head>) -->

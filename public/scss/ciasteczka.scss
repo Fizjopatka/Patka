@@ -1,0 +1,59 @@
+@import 'colors';
+#ciasteczka {
+    padding: 50px 0;
+    .logo {
+        margin: 0 auto;
+        width: 50%;
+        height: auto;
+        @media(max-width: 991px) {
+            width: 80%;
+        }
+    }
+
+    
+
+    .text-container {
+        margin-bottom: 25px;
+        
+        h2 {
+            margin-top: 50px;
+            color: $col-red-main;
+            margin-bottom: 15px;
+        }
+
+        h2, p {
+            @media (max-width: 991px) {
+                padding: 0 15px;
+            }
+        }
+    }
+
+    .przegladarka {
+        transition: filter 0.5s;
+        @media (max-width: 991px) {
+            margin-bottom: 30px;
+        }
+        &:hover {
+            filter: brightness(0.8);
+        }
+        img {
+            width: auto;
+            height: 200px;
+            margin: 0 auto;
+            cursor: pointer;
+        }
+
+        p {
+            text-align: center;
+            font-size: 18px;
+            margin-top: 20px;
+            a {
+                color: grey;
+            }
+        }
+    }
+    
+    button {
+        margin-top: 30px;
+    }
+}

@@ -1,0 +1,49 @@
+@import 'colors';
+#error_404 {
+    background-color: $col-purple;
+    .container{
+        .row{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            padding: 5% 0;
+            .button-div{
+                display: flex;
+                justify-content: center;
+                align-content: center;
+                position: relative;
+            }
+        }
+    }
+    h1, p {
+        text-align: center;
+        color: $col-action;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    h1 {
+        font-size: 50px;
+    }
+    p {
+        font-size: 26px;
+    }
+    a{
+        padding: 20px 40px;
+        display: block;
+        color: $col-action;
+        border: 1px solid $col-action;
+        text-decoration: none;
+        font-size: 20px;
+        line-height: 20px;
+        height: 60px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        transition: 0.5s;
+        &:hover{
+            background-color: $col-purple-more;
+            transition: 0.5s;
+        }
+    }
+}

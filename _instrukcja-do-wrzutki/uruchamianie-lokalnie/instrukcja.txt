@@ -1,0 +1,21 @@
+Jak odpalić stronę lokalnie
+1. Ustawiamy httpd-vhosts.conf w xamppie (kod nie jest taki jak zwykle, używamy takiego jak ten na dole)
+2. Ustawiamy hosts w windowsie jak zawsze
+3. W root folderze znajduje się plik "env" - zmieniamy jego nazwę na ".env"
+4. Ustawiamy w nim base_url na taki jaki ustawiliśmy w kroku nr 1
+5. Ustawiamy CI_ENVIRONMENT na "development"
+6. W razie potrzeby uzupełniamy dane dostępu do bazy danych
+
+
+Kod do wrzucenia do httpd-vhosts.conf:
+
+<VirtualHost *:80>
+    ServerName basic-ci.local.com
+    DocumentRoot "C:/xampp/htdocs/basic-ci/public"
+    <Directory "C:/xampp/htdocs/basic-ci/public">
+ 	Options Indexes FollowSymLinks MultiViews
+            	AllowOverride All
+            	Order allow,deny
+            	allow from all
+   </Directory>
+</VirtualHost>

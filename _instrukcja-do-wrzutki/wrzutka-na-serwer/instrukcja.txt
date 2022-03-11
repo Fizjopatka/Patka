@@ -1,0 +1,10 @@
+Jak odpalić stronę na serwerze: 
+1. Przerzucamy wszystkie pliki na serwer
+2. Przerzucamy .htaccess i index.php z folderu "root-folder" do root folderu strony (tylko na serwerze, nie lokalnie)
+3. Przerzucamy .htaccess i index.php z folderu "public-folder" do folderu public (tylko na serwerze, nie lokalnie)
+4. Zmieniamy $base_url w pliku app/Config/App.php na https://url_strony.pl/public
+5. W tym samym pliku zmieniamy $indexPage na '' (puste)
+6. Zmieniamy $viewDirectory w pliku app/Config/Paths.php nad '../../Views' (dodajemy kropki)
+7. Jeśli potrzebujemy bazy danych, zmieniamy dane serwera i bazy w pliku app/Config/Database.php
+8. Żeby strona działała nam dalej na localu, w pliku .env ustawiamy lokalne base_url oraz dane dostępu do bazy (czyli takie jakie mieliśmy przed wrzutką)
+9. Chyba powinno już zacząć działać 
